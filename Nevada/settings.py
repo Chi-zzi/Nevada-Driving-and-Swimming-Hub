@@ -143,6 +143,8 @@ EMAIL_HOST_PASSWORD = "egov blsu qikc sque"
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
 
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
@@ -153,6 +155,7 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 STATICFILES_DIRS = [os.path.join(BASE_DIR, "NSD", "static"),]  # Ensure Django finds static files]
 
+STATIC_ROOT = os.path.join(BASE_DIR, 'NSD', 'staticfiles')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
